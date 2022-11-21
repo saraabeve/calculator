@@ -10,3 +10,7 @@ function mode() {
 function displayButtonInfo(value) {
   document.getElementById("result");
 }
+
+//event listeners:
+document.getElementById("light").addEventListener("click", mode);
+document.getElementById("info").addEventListener("click", info);

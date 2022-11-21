@@ -4,47 +4,29 @@
     <title>calculator</title>
     <meta charset="utf-8" />
     <link name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="calculator">
       <div class="history"></div>
       <div class="main" id="main">
-        <button id="info" value="info" onclick="info()">🛈</button>
+        <button id="info" value="info">🛈</button>
         <button disabled id="title" class="colspan">My Calculator</button>
         <button id="config" value="config">⚙️</button>
-        <button id="light" value="light" onclick="mode()">💡</button>
-        <div id="screen" class="colspan"></div>
-        <button id="back" value="c">🔙</button>
+        <button id="light" value="light">💡</button>
+        <button id="screen" class="colspan"></button>
+        <button id="back" value="delete">🔙</button>
         <button id="history" value="">🕙</button>
         <button id="clear" value="reset" class="colspan">C</button>
         <button id="divide" value="/" class="operator">➗</button>
         <button id="scimode" value="scimode">&#402;</button>
-        <button
-          id="7"
-          class="numbers"
-          value="7"
-          onclick="displayButtonInfo(value)"
-        >
-          7
-        </button>
+        <button id="7" class="numbers" value="7">7</button>
         <button id="8" class="numbers" value="8">8</button>
         <button id="9" class="numbers" value="9">9</button>
-        <button
-          id="multiple"
-          class="operator"
-          value="*"
-          onclick="UpdateOperator(this.value)"
-        >
-          ✖
-        </button>
+        <button id="multiple" class="operator" value="*">✖</button>
         <button id="api-mode">☁️</button>
-        <button id="4" class="numbers" value="4" onclick="updateOperand(value)">
-          4
-        </button>
-        <button id="5" class="numbers" value="5" onclick="updateOperand(value)">
-          5
-        </button>
+        <button id="4" class="numbers" value="4">4</button>
+        <button id="5" class="numbers" value="5">5</button>
         <button id="6" class="numbers" value="6">6</button>
         <button id="sub" class="operator" value="-">➖</button>
         <button disabled></button>
@@ -56,11 +38,11 @@
         <button id="+/-" class="pm">±</button>
         <button id="0" class="numbers" value="0">0</button>
         <button id="point" class="decimal" value=".">•</button>
-        <button id="equal" value="=" onclick="answer() ">=</button>
+        <button id="equal" value="=">=</button>
       </div>
       <div class="scientific"></div>
     </div>
     <script src="./js/application.js"></script>
-    <script src="./js/calculator.js"></script>
+    <script async src="./js/calculator.js"></script>
   </body>
 </html>

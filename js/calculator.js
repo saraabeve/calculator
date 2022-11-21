@@ -1,8 +1,13 @@
 let firstOperand = undefined;
 let secondOperand = undefined;
 let currentOpertaor = undefined;
-let output = undefined;
-let currentValue = 0;
+let currentValue = "0";
+let history = [];
+
+const numbers = document.querySelectorAll(".numbers");
+const operators = document.querySelectorAll(".operator");
+const resetButton = document.getElementById("clear");
+const equalButton = document.getElementById("equal");
 
 //when a num button is clicked this fun will update the first or second operand
 function updateOperand(digit) {
@@ -17,7 +22,8 @@ function updateOperand(digit) {
     secondOperand += str;
   }
 }
-// this fun update the current opertaor, excute calculate in case its needed
+
+// this function update the current opertaor, excute calculate in case its needed
 function UpdateOperator(operator) {
   if (currentOpertaor === undefined) {
     currentOpertaor = operator;
@@ -28,7 +34,7 @@ function UpdateOperator(operator) {
     secondOperand = undefined;
   }
 }
-//returns the current value of the caculation
+//returns the current value of the calculation
 function answer() {
   if (secondOperand === undefined) {
     alert(currentValue);
@@ -36,14 +42,16 @@ function answer() {
     alert(eval(firstOperand + currentOpertaor + secondOperand));
   }
   reset();
+  return;
 }
 //deletes all values of the calculation
 function reset() {
   firstOperand = undefined;
   secondOperand = undefined;
   currentOpertaor = undefined;
-  output = undefined;
-  currentValue = undefined;
+  currentValue = "0";
+  calculateNeed = false;
+  return;
 }
 //delete the last input in the calculator
 function back() {
@@ -55,3 +63,18 @@ function back() {
     firstOperand = null;
   }
 }
+//event listners
+numbers.forEach(function (num) {
+  num.addEventListener("click", function () {
+    return updateOperand(num.getAttribute("value"));
+  });
+});
+
+operators.forEach(function (operator) {
+  operator.addEventListener("click", function () {
+    return UpdateOperator(operator.getAttribute("value"));
+  });
+});
+
+resetButton?.addEventListener("click", reset);
+equalButton?.addEventListener("click", answer);
