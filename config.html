@@ -8,32 +8,37 @@
       <title>config</title>
     </head>
     <body>
-      <select name="colors" id="colors">
-        <option value="">--Please choose a color--</option>
-        <option value="green">green</option>
-        <option value="pink">pink</option>
-        <option value="yellow">yellow</option>
-        <option value="red">red</option>
-        <option value="blue">blue</option>
-      </select>
-      <select name="fonts" id="fonts">
-        <option value="">--Please choose a font--</option>
-        <option value="Arial, Helvetica, sans-serif">ariel</option>
-        <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
-        <option value="Times New Roman', Times, serif">Times New Roman</option>
-        <option value="Georgia, 'Times New Roman', Times, serif">
-          Georgie
-        </option>
-        <option
-          value="Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+      <form action="/index.html" method="get">
+        <select name="colors" id="colors">
+          <option value="">--Please choose a color--</option>
+          <option value="green">green</option>
+          <option value="pink">pink</option>
+          <option value="yellow">yellow</option>
+          <option value="red">red</option>
+          <option value="blue">blue</option>
+        </select>
+        <select name="fonts" id="fonts">
+          <option value="">--Please choose a font--</option>
+          <option value="Arial, Helvetica, sans-serif">ariel</option>
+          <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+          <option value="Times New Roman', Times, serif">
+            Times New Roman
+          </option>
+          <option value="Georgia, 'Times New Roman', Times, serif">
+            Georgie
+          </option>
+          <option
+            value="Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+          >
+            Gil sans
+          </option>
+        </select>
+        <label
+          ><input type="radio" value="dark" name="mode" />dark mode
+          <input type="radio" value="light" name="mode" />light mode</label
         >
-          Gil sans
-        </option>
-      </select>
-      <label
-        ><input type="radio" value="dark" name="mode" />dark mode
-        <input type="radio" value="light" name="mode" />light mode</label
-      >
+        <button type="submit">apply settings</button>
+      </form>
     </body>
   </html>
 </html>

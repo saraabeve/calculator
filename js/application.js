@@ -1,16 +1,29 @@
 function info() {
-  alert("sara abeve" + "\n" + "stage1" + "\n" + "this is an calculator app");
+    fetch("/info.html")
+        .then((response) => response.text())
+        .then((text) => (document.getElementById("popup").innerHTML = text));
 }
-// toggle the dark and light mode
 function mode() {
-  element = document.body;
-  element.classList.toggle("darkmode");
+    let element = document.body;
+    element.classList.toggle("darkmode");
 }
-
-function displayButtonInfo(value) {
-  document.getElementById("result");
+function lightOn() {
+    let Element = document.body;
+    Element.classList.toggle("lighton");
 }
-
-//event listeners:
-document.getElementById("light").addEventListener("click", mode);
+function historyDisplay() {
+    let Element = document.body;
+    Element.classList.toggle("showHistory");
+}
+function scienceDisplay() {
+    let Element = document.body;
+    Element.classList.toggle("showSciense");
+}
+function openform() {
+    window.location.href = "/config.html";
+}
+document.getElementById("light").addEventListener("click", lightOn);
 document.getElementById("info").addEventListener("click", info);
+document.getElementById("history").addEventListener("click", historyDisplay);
+document.getElementById("scimode").addEventListener("click", scienceDisplay);
+document.getElementById("config").addEventListener("click", openform);

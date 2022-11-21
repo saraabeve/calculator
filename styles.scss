@@ -16,11 +16,13 @@
 .scientific {
   grid-area: s;
   background-color: #cafebf;
+  display: none;
 }
 
 .history {
   grid-area: h;
   background-color: #99a194;
+  display: none;
 }
 
 .main {
@@ -64,4 +66,33 @@ button:hover {
   button:hover {
     background-color: #99a194;
   }
+}
+.lighton {
+  #screen {
+    background-color: yellow;
+  }
+  #light {
+    background-color: orange;
+  }
+}
+.showHistory {
+  .history {
+    display: block;
+  }
+  #history {
+    background-color: orange;
+  }
+}
+.showSciense {
+  .scientific {
+    display: block;
+  }
+  #scimode {
+    background-color: orange;
+  }
+}
+.popMessege {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
