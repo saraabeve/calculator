@@ -9,39 +9,49 @@
   <body>
     <div id="popup"></div>
     <div class="calculator">
-      <div class="history"></div>
+      <div class="history">
+        <h2>opeartion log</h2>
+      </div>
       <div class="main" id="main">
-        <button id="info" value="info">🛈</button>
+        <button id="info" value="info">ℹ️</button>
         <button disabled id="title" class="colspan">My Calculator</button>
         <button id="config" value="config">⚙️</button>
         <button id="light" value="light">💡</button>
         <button id="screen" class="colspan"></button>
-        <button id="back" value="delete">🔙</button>
+        <button id="back" value="delete">⬅</button>
         <button id="history" value="">🕙</button>
-        <button id="clear" value="reset" class="colspan">C</button>
+        <button id="clear" value="reset" class="colspan">🇨</button>
         <button id="divide" value="/" class="operator">➗</button>
-        <button id="scimode" value="scimode">&#402;</button>
-        <button id="7" class="numbers" value="7">7</button>
-        <button id="8" class="numbers" value="8">8</button>
-        <button id="9" class="numbers" value="9">9</button>
+        <button id="scimode" value="scimode">√</button>
+        <button id="7" class="numbers" value="7">7️⃣</button>
+        <button id="8" class="numbers" value="8">8️⃣</button>
+        <button id="9" class="numbers" value="9">9️⃣</button>
         <button id="multiple" class="operator" value="*">✖</button>
         <button id="api-mode">☁️</button>
-        <button id="4" class="numbers" value="4">4</button>
-        <button id="5" class="numbers" value="5">5</button>
-        <button id="6" class="numbers" value="6">6</button>
+        <button id="4" class="numbers" value="4">4️⃣</button>
+        <button id="5" class="numbers" value="5">5️⃣</button>
+        <button id="6" class="numbers" value="6">6️⃣</button>
         <button id="sub" class="operator" value="-">➖</button>
         <button disabled></button>
-        <button id="1" class="numbers" value="1">1</button>
-        <button id="2" class="numbers" value="2">2</button>
-        <button id="3" class="numbers" value="3">3</button>
+        <button id="1" class="numbers" value="1">1️⃣</button>
+        <button id="2" class="numbers" value="2">2️⃣</button>
+        <button id="3" class="numbers" value="3">3️⃣</button>
         <button id="+" class="operator" value="+">➕</button>
         <button disabled></button>
         <button id="+/-" class="pm">±</button>
-        <button id="0" class="numbers" value="0">0</button>
+        <button id="0" class="numbers" value="0">0️⃣</button>
         <button id="point" class="decimal" value=".">•</button>
         <button id="equal" value="=">=</button>
       </div>
-      <div class="scientific"></div>
+      <div class="scientific">
+        <h2>scientific mode</h2>
+        <button id="squreroot">√</button>
+        <button id="squareby">mod</button>
+        <button id="power">x^y</button>
+        <button id="pai">π</button>
+    </div>
+    <div id="messege">
+      <p>developer: sara abeve, this is an calculator app</p>
     </div>
     <script src="./js/application.js"></script>
     <script async src="./js/calculator.js"></script>

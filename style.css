@@ -4,14 +4,22 @@
   box-sizing: border-box;
 }
 
+div,
+main,
+button {
+  border-radius: 25px;
+}
+
 .calculator {
+  border-radius: 50px;
   margin: 30px 20px 10px 250px;
-  width: 65%;
+  width: 50%;
   display: grid;
   grid-template-columns: 2fr 5fr 2fr;
   grid-template-rows: 100%;
   grid-template-areas: "h m s";
   font-size: large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .scientific {
@@ -28,7 +36,7 @@
 
 .main {
   grid-area: m;
-  background-color: #b0dfee;
+  background-color: #c6f4db;
   position: relative;
   display: grid;
   grid-template-columns: 1fr repeat(3, 2fr) 1.5fr;
@@ -56,20 +64,36 @@ button {
 }
 
 .numbers {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 button:hover {
-  background-color: #ccd4d5;
+  background-color: #86ccd6;
+}
+
+.scientific button {
+  font-size: medium;
+  background-color: #9ad8b6;
+  border-radius: 5px;
+}
+
+.scientific button:hover {
+  background-color: #8fae9d;
 }
 
 .darkmode * {
-  background-color: #2a2e31;
+  background-color: #77797a;
   border-color: white;
   color: white;
 }
 .darkmode button:hover {
-  background-color: #99a194;
+  background-color: #51544f;
+}
+.darkmode .history {
+  display: none;
+}
+.darkmode .scientific {
+  display: none;
 }
 
 .lighton #screen {
@@ -93,10 +117,13 @@ button:hover {
   background-color: orange;
 }
 
-.popMessege {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+#messege {
+  display: none;
+  border: solid 2px black;
+  background-color: #9ad8b6;
+  box-sizing: content-box;
 }
-
+.displaymessege #messege {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */
