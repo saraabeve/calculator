@@ -40,3 +40,4 @@ document.getElementById("history").addEventListener("click", historyDisplay);
 document.getElementById("scimode").addEventListener("click", scienceDisplay);
 document.getElementById("config").addEventListener("click", openform);
 document.addEventListener("DOMContentLoaded", configSettings);
+//

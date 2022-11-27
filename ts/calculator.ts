@@ -118,3 +118,4 @@ resetButton?.addEventListener("click", reset);
 sciButtom.addEventListener("click", updateCalulateMode);
 deleteButton.addEventListener("click", back);
 equalButton.addEventListener("click", answer);
+//
